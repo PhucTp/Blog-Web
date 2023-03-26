@@ -1,47 +1,127 @@
 $lightGreen: #55efc4;
+$lightPurple: #DFAAB8;
 
 
-
-.auth{
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: $lightGreen   ;
-}
-h1{
-    font-size: 20px; 
-    color: teal; 
-    margin-bottom: 10px;
-} 
-form{
+.app{
     display: flex;
-    flex-direction: column; 
-    background: white; 
-    width: 300px; 
-    padding: 10px; 
-    gap: 20px;
-} 
-input{
-    padding: 10px;
-    border: none; 
-    text-align: left;
-    border-bottom: 1px solid gray;
+    justify-content: center;
+
+    .container{  
+        width: 1239px;
+
+        .link{
+            text-decoration: none; 
+            color:inherit;
+        }
+
+        .auth{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightGreen;
+
+            h1{
+                font-size: 20px; 
+                color: teal; 
+                margin-bottom: 10px;
+            } 
+            form{
+                display: flex;
+                flex-direction: column; 
+                background: white; 
+                width: 300px; 
+                padding: 10px; 
+                gap: 20px;
+            
+                input{
+                    padding: 10px;
+                    border: none; 
+                    text-align: left;
+                    border-bottom: 1px solid gray;
+                }
+                button{
+                    padding: 8px; 
+                    border: none; 
+                    background-color: teal;
+                }
+                span{
+                    font-size: 12px; 
+                    text-align: center;
+                    display: block; 
+                    padding: 10px
+                }
+                p{
+                    color:red; 
+                    font-size: 12px; 
+                    text-align: center;
+                }
+            } 
+        }
+        
+        .navbar{
+            .container{ 
+                padding: 10px 0; 
+                display: flex; 
+                justify-content: space-between;
+                align-items: center;
+                .logo{
+                    img{
+                        width: 120px;
+                        border-radius: 20%;
+                    }
+                }
+                .links{
+                    display: flex; 
+                    align-items: center;
+                    gap: 10px;
+
+                    h6{
+                        font-size: 16px; 
+                        font-weight: 400;
+                    }
+                    span{
+                        cursor: pointer;
+                    }
+                    .write{
+                        background-color:  $lightPurple;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 400; 
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: rgb(199, 14, 184);
+                            background-color: white;
+                            border: 1px solid rgb(199, 14, 184);
+                        }
+                    }
+                }
+            }
+        }
+        // FOOTER
+        footer{
+            display: none;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightGreen; 
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;;
+            img{
+                height: 60px;
+                border-radius: 10px;
+            }
+        }
+        
+       
+       
+    } 
 }
-button{
-    padding: 8px; 
-    border: none; 
-    background-color: teal;
-}
-span{
-    font-size: 12px; 
-    text-align: center;
-    display: block; 
-    padding: 10px
-}
-p{
-    color:red; 
-    font-size: 12px; 
-    text-align: center;
-}
+
