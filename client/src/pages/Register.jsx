@@ -10,7 +10,7 @@ const Register = () => {
         email: "",
         password: "",
       });
-      //const [err, setError] = useState(null);
+      const [err, setError] = useState(null);
     
       const navigate = useNavigate();
 
@@ -21,14 +21,11 @@ const Register = () => {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const res = await axios.post("/auth/register", inputs);
-          console.log(inputs.username);
-          console.log(res)
-
-          //navigate("/login");
+          await axios.post("/auth/register", inputs);
+          navigate("/login");
         } catch (err) {
           console.log(err);
-          //setError(err.response.data);
+          setError(err.response.data);
         }
       };
 
@@ -40,11 +37,11 @@ const Register = () => {
             <input require="true" type="email" placeholder='email'  name="email" onChange={handleChange} />
             <input require="true" type="password" placeholder='password' name="password" onChange={handleChange} /> 
             <button onClick={handleSubmit}>Register</button>
-            <p>This is an error!</p>
+            {err && <p>{err}</p>}
             <span>Don't you have an account <Link to="/login">Login</Link></span>
         </form>
     </div>
-    )
-    
-}
+    );    
+};
+
 export default Register
