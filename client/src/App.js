@@ -9,7 +9,8 @@ import Login from "./pages/Login";
 import Single from "./pages/Single"; 
 import Write from "./pages/Write";  
 import Home from "./pages/Home"; 
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";   
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import "./style.scss"
 const Layout = () =>{
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         element: <Home/>,
       },
       {
-        path: "/login/:id",
+        path: "/post/:id",
         element: <Single/>,
       },
       {
