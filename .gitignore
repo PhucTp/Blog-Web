@@ -1,7 +1,7 @@
 
 
-.cache/default-development
-.cache/default-development
-.cache/eslintcache
-.pack
+api/node_modules
+client/node_modules
+/.pnp
+.pnp.js
 
