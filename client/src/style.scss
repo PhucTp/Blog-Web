@@ -1,5 +1,6 @@
 $lightGreen: #55efc4;
 $lightPurple: #DFAAB8;
+$cover-color: rgba(0, 0, 0, 0.8);
 
 
 .app{
@@ -276,7 +277,105 @@ $lightPurple: #DFAAB8;
                     }
                 }
             }
+       }
+       //Profile
+       .profile{
+        width: 70%;
+        margin-top: 20px;
+        display: flex;
+        margin-left: 10px;
+        align-items: center;
+        position: relative;
+        
+        .profile-image{
+            img{
+                width: 75%;
+                border-radius: 5%;
+                margin-right: 20px;
+            }
+        }
+        .profileform{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            gap: 10px;
+            align-items: center;
+            width: 135%;
+            height: 100%;
+            border: 2px solid #333;
 
+            label {
+                font-size: 15px;
+            }
+            .inputfile{
+                    margin-bottom: 1rem;
+                    border: 1px solid gray;
+                    border-radius: 0.25rem;
+                    font-size: 1rem;
+                    width: 70%;
+                    height: 300%;
+                    align-items: center;
+            }
+            input{
+                margin-bottom: 1rem;
+                border: 1px solid gray;
+                border-radius: 0.25rem;
+                font-size: 1rem;
+                width: 70%;
+                height: 500%;
+            }
+        }
+        .ButtonsSF{
+            display: flex;
+            margin-top: 30px;
+            gap: 50px;
+            margin-left: 130px;
+            button {
+                background-color: #0080ff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px; 
+                font-size: 16px;
+                margin-right: 10px;
+                object-fit: contain;
+                
+                &:last-child {
+                  margin-right: 0;
+                }
+            }   
+        }
+        .info{
+
+            h1 {
+                font-size: 75px;
+                margin: 0;
+            }
+            p {
+                font-size: 16px;
+                margin: 0;
+                color: #555;
+            }
+            .buttons{
+                display: flex;
+                margin-top: 50px;
+                gap: 50px;
+                button {
+                    background-color: #0080ff;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    margin-right: 10px;
+                    object-fit: contain;
+                    
+                    &:last-child {
+                      margin-right: 0;
+                    }
+                }
+            }
+        }
        }
        .add{
         margin-top: 20px;
